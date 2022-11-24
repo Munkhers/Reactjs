@@ -1,0 +1,17 @@
+.buttons {
+    padding: 10px;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    background-color: #61dafb;
+    font-weight: 650;
+}
+
+.display {
+    font-size: 100px;
+}
+
+.reset-button {
+    width: 100px;
+}

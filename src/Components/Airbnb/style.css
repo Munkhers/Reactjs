@@ -1,0 +1,32 @@
+
+.container {
+    flex-direction: row;
+    margin: 30px;
+    width: 300px;
+}
+
+.image {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.price, .destination, .distance, .date {
+  width: 300px;
+}
+
+.destination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price, .destination {
+    font-weight: 500;
+}
+.airBnb {
+    display: flex;
+}
+
+
+
+
