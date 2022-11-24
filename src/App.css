@@ -39,7 +39,7 @@
   }
 }
 
-.todo-container {
+/* .todo-container {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -47,5 +47,5 @@
   align-content: flex-start;
   align-items: flex-start;
   background-color: aliceblue;
-}
+} */
 

@@ -3,11 +3,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    /* background-color: #031e33; */
     height: 100%;
     width: 100%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* color:white; */
  
 }
 .todo-input, .todo-search {
@@ -17,11 +15,18 @@ body {
     display: flex;
     margin: 10px;
     padding: 10px;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     -webkit-box-shadow: 0 0 5px 2px rgb(146, 143, 143);
     -moz-box-shadow: 0 0 5px 2px rgb(146, 143, 143);
     box-shadow: 0 0 5px 2px rgb(146, 143, 143);
+}
+.todo-search-field {
+    width: 100%;
+
+}
+.todo-input-field {
+    width: 100%;
 }
 .todo-lists {
     border: 1px solid rgb(146, 143, 143);
@@ -47,18 +52,6 @@ body {
     -moz-box-shadow: 0 0 5px 2px rgb(146, 143, 143);
     box-shadow: 0 0 5px 2px rgb(146, 143, 143);
 }
-input {
-    height: 80%;
-    width: 80%;
-    border-radius: 3px;
-    border: 1px solid;
-}
-.todo-submit {
-    /* background-color: #3f51b5; */
-    /* height: 45px; */
-    margin-left: 10px;
-    border-radius: 3px;
-}
 .completed {
     border: 1px solid rgb(146, 143, 143);
     height: 50%;
@@ -83,12 +76,4 @@ button:hover {
 .list-date {
     color:#bbbac4
 }
-.todo-search-button {
-    border-radius: 5px;
-    margin-left: 5px;
-}
-.todo-local {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+

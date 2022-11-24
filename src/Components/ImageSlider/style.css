@@ -1,4 +1,62 @@
-.images {
-    border: 1px, solid, black;
-    border-radius: 5px;
+.image-slider-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100vh;
 }
+.images-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.slider-images {
+    position: relative;
+    border-radius: 30px;
+    height: 500px;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-arrow {
+    position: relative;
+    color: white;
+    left: 10px;
+    cursor: pointer;
+    font-size: 60px;
+}
+.right-arrow {
+    position: relative;
+    color: white;
+    right: 10px;
+    cursor: pointer;
+    font-size: 60px;
+}
+.dots-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1%;
+    align-content: center;
+    left: 50%;
+    right: 50%;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+}
+.active-dot {
+    color: white;
+    font-size: 30px;
+}
+.arrows {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+

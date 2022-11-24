@@ -78,6 +78,7 @@ const TicTacToe = () => {
             && data[6].value !== '' && data[7].value !== '' && data[8].value !== '') {
             setIsDrawn(true);
         }
+        
     }
 
     const newGame = () => {
@@ -96,6 +97,7 @@ const TicTacToe = () => {
             <div>
                 <button className='newGame-btn' onClick={() => { newGame() }}>New game</button>
             </div>
+            <div>Turn: {turn}</div>
             <div>{winner !== '' && '' + winner + ' player won.'}</div>
             <div>{isDrawn && 'Players drawn'}</div>
             <div className="grid-container">
@@ -103,7 +105,7 @@ const TicTacToe = () => {
                     data.map((item, index) => {
                         return <div
                             key={index}
-                            onClick={() => { onClickBoard(index) }}
+                            onClick={() => {winner === '' && onClickBoard(index) }}
                             className="grid-item"
                         >
                             {item.value}
