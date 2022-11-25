@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Cell from './card'
 import './style.css'
 
+
 const MemoryGame = () => {
     const [data, setData] = useState([
         { id: 0, value: 'A', status: 'hidden' },
@@ -20,7 +21,7 @@ const MemoryGame = () => {
         { id: 13, value: 'G', status: 'hidden' },
         { id: 14, value: 'H', status: 'hidden' },
         { id: 15, value: 'H', status: 'hidden' },
-    ].sort(() => Math.random() - 0.5))
+    ])
     // .sort(() => Math.random() - 0.5)
 
 
