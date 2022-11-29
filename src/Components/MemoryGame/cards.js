@@ -1,30 +1,36 @@
 import React, { useState } from 'react'
 import Cell from './card'
 import './style.css'
+import css from './images/css_logo.png'
+import edge from './images/edge_logo.png'
+import html from './images/html_logo.png'
+import javascript from './images/javascript_logo.png'
+import node from './images/Node_logo.png'
+import phyton from './images/phyton_logo.png'
+import react from './images/react_logo.png'
+import vscode from './images/Vscode_logo.png'
 
 
 const MemoryGame = () => {
     const [data, setData] = useState([
-        { id: 0, value: 'A', status: 'hidden' },
-        { id: 1, value: 'A', status: 'hidden' },
-        { id: 2, value: 'B', status: 'hidden' },
-        { id: 3, value: 'B', status: 'hidden' },
-        { id: 4, value: 'C', status: 'hidden' },
-        { id: 5, value: 'C', status: 'hidden' },
-        { id: 6, value: 'D', status: 'hidden' },
-        { id: 7, value: 'D', status: 'hidden' },
-        { id: 8, value: 'E', status: 'hidden' },
-        { id: 9, value: 'E', status: 'hidden' },
-        { id: 10, value: 'F', status: 'hidden' },
-        { id: 11, value: 'F', status: 'hidden' },
-        { id: 12, value: 'G', status: 'hidden' },
-        { id: 13, value: 'G', status: 'hidden' },
-        { id: 14, value: 'H', status: 'hidden' },
-        { id: 15, value: 'H', status: 'hidden' },
-    ])
-    // .sort(() => Math.random() - 0.5)
-
-
+        { id: 0, value: "A", img: <img src={css} alt='' height={110}/>,  status: 'hidden' },
+        { id: 1, value: 'A', img: <img src={css} alt=''height={110}/>, status: 'hidden' },
+        { id: 2, value: 'B', img: <img src={edge} alt=''height={110}/>, status: 'hidden' },
+        { id: 3, value: 'B', img:<img src={edge} alt=''height={110}/>, status: 'hidden' },
+        { id: 4, value: 'C', img:<img src={html} alt=''height={110}/>, status: 'hidden' },
+        { id: 5, value: 'C', img:<img src={html} alt=''height={110}/>, status: 'hidden' },
+        { id: 6, value: 'D', img:<img src={javascript} alt=''height={110}/>, status: 'hidden' },
+        { id: 7, value: 'D', img:<img src={javascript} alt=''height={110}/>, status: 'hidden' },
+        { id: 8, value: 'E', img:<img src={node} alt=''height={80} width={110}/>, status: 'hidden' },
+        { id: 9, value: 'E', img:<img src={node} alt=''height={80} width={110}/>, status: 'hidden' },
+        { id: 10, value: 'F', img:<img src={phyton} alt=''height={110}/>, status: 'hidden' },
+        { id: 11, value: 'F', img:<img src={phyton} alt=''height={110}/>, status: 'hidden' },
+        { id: 12, value: 'G', img:<img src={react} alt=''height={110}/>, status: 'hidden' },
+        { id: 13, value: 'G', img:<img src={react} alt=''height={110}/>, status: 'hidden' },
+        { id: 14, value: 'H', img:<img src={vscode} alt=''height={110}/>, status: 'hidden' },
+        { id: 15, value: 'H', img:<img src={vscode} alt=''height={110}/>, status: 'hidden' },
+    ].sort(() => Math.random() - 0.5))
+  
     const [playerTurn, setPlayerTurn] = useState('1');
     const [score, setScore] = useState({ player1: 0, player2: 0 });
     const [current, setCurrent] = useState(-1);
@@ -43,22 +49,22 @@ const MemoryGame = () => {
     }
     const newGame = () => {
         setData([
-            { id: 0, value: 'A', status: 'hidden' },
-            { id: 1, value: 'A', status: 'hidden' },
-            { id: 2, value: 'B', status: 'hidden' },
-            { id: 3, value: 'B', status: 'hidden' },
-            { id: 4, value: 'C', status: 'hidden' },
-            { id: 5, value: 'C', status: 'hidden' },
-            { id: 6, value: 'D', status: 'hidden' },
-            { id: 7, value: 'D', status: 'hidden' },
-            { id: 8, value: 'E', status: 'hidden' },
-            { id: 9, value: 'E', status: 'hidden' },
-            { id: 10, value: 'F', status: 'hidden' },
-            { id: 11, value: 'F', status: 'hidden' },
-            { id: 12, value: 'G', status: 'hidden' },
-            { id: 13, value: 'G', status: 'hidden' },
-            { id: 14, value: 'H', status: 'hidden' },
-            { id: 15, value: 'H', status: 'hidden' },
+            { id: 0, value: "A", img: <img src={css} alt='' height={110}/>,  status: 'hidden' },
+            { id: 1, value: 'A', img: <img src={css} alt=''height={110}/>, status: 'hidden' },
+            { id: 2, value: 'B', img: <img src={edge} alt=''height={110}/>, status: 'hidden' },
+            { id: 3, value: 'B', img:<img src={edge} alt=''height={110}/>, status: 'hidden' },
+            { id: 4, value: 'C', img:<img src={html} alt=''height={110}/>, status: 'hidden' },
+            { id: 5, value: 'C', img:<img src={html} alt=''height={110}/>, status: 'hidden' },
+            { id: 6, value: 'D', img:<img src={javascript} alt=''height={110}/>, status: 'hidden' },
+            { id: 7, value: 'D', img:<img src={javascript} alt=''height={110}/>, status: 'hidden' },
+            { id: 8, value: 'E', img:<img src={node} alt=''height={80} width={110}/>, status: 'hidden' },
+            { id: 9, value: 'E', img:<img src={node} alt=''height={80} width={110}/>, status: 'hidden' },
+            { id: 10, value: 'F', img:<img src={phyton} alt=''height={110}/>, status: 'hidden' },
+            { id: 11, value: 'F', img:<img src={phyton} alt=''height={110}/>, status: 'hidden' },
+            { id: 12, value: 'G', img:<img src={react} alt=''height={110}/>, status: 'hidden' },
+            { id: 13, value: 'G', img:<img src={react} alt=''height={110}/>, status: 'hidden' },
+            { id: 14, value: 'H', img:<img src={vscode} alt=''height={110}/>, status: 'hidden' },
+            { id: 15, value: 'H', img:<img src={vscode} alt=''height={110}/>, status: 'hidden' },
         ].sort(() => Math.random() - 0.5));
         setScore({ player1: 0, player2: 0 });
         setPlayerTurn('1');
@@ -86,20 +92,20 @@ const MemoryGame = () => {
             setData(currState => currState.map((c, cIdx) => [current, index].includes(cIdx) ? { ...c, status: 'wrong' } : c))
             setTimeout(() => {
                 setData(currState => currState.map((c, cIdx) => [current, index].includes(cIdx) ? { ...c, status: 'hidden' } : c))
-            }, 500);
+            }, 1500);
         }
         setCurrent(-1);
     }
     return (
         <div className='memory-game-container'>
-            <h2 className='player-score'>Player 1 score: {score.player1}</h2>
+            <h1 className='player-score'>Player 1 score: {score.player1}</h1>
             <div className='game-board'>
-                {score.player1 + score.player2 === 8 && <h2 className='player-winner'>
-                    {score.player1 > score.player2 ? `Player 1 win with ${score.player1} points.`
-                        : score.player1 === score.player2 ? 'Players drawn' : `Player 2 win with ${score.player2} points.`}
-                </h2>}
-                <button onClick={() => newGame()} className='new-game-button'>New Game</button>
-                <h2 className='player-turn'>Turn: Player {playerTurn}</h2>
+                {score.player1 + score.player2 === 8 && <h1 className='player-winner'>
+                    {score.player1 > score.player2 ? `Congratulations! Player 1 win with ${score.player1} points.`
+                        : score.player1 === score.player2 ? 'Players drawn' : `Congratulations! Player 2 win with ${score.player2} points.`}
+                </h1>}
+                <button onClick={() => newGame()} className='new-game-button'>NEW GAME!</button>
+                <h1 className='player-turn'>Turn: Player {playerTurn}</h1>
                 <div className='memory-game-table'>
                     {data.map((item, idx) => (
                         <Cell
@@ -111,7 +117,7 @@ const MemoryGame = () => {
                     ))}
                 </div>
             </div>
-            <h2 className='player-score'>Player 2 score: {score.player2}</h2>
+            <h1 className='player-score'>Player 2 score: {score.player2}</h1>
 
         </div>
     )

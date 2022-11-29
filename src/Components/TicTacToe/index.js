@@ -93,7 +93,7 @@ const TicTacToe = () => {
     }
 
     return (
-        <div className="game-board">
+        <div className="tictactoe-game-board">
             <div>
                 <button className='newGame-btn' onClick={() => { newGame() }}>New game</button>
             </div>

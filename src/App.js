@@ -3,16 +3,16 @@
 // import logo from "./logo.svg";
 import React from 'react';
 // import BmiTracker from './Components/BMI';
-// import ColorPicker from './Components/ColorPicker';
-// import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import ColorPicker from './Components/ColorPicker';
+import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
 import MemoryGame from './Components/MemoryGame/cards';
-// import LiveClock  from './Components/LiveClock';
+import LiveClock  from './Components/LiveClock';
 // import ControlledComp from './Components/controlledComp';
 // import EmployeeList from './Components/EmployeeList';
-// import ImageSlider from './Components/ImageSlider';
-// import ToDo from './Components/ToDo';
-// import MemoryGame from './Components/MemoryGame/cards';
-// import TicTacToe from './Components/TicTacToe';
+import ImageSlider from './Components/ImageSlider';
+import ToDo from './Components/ToDo';
+import TicTacToe from './Components/TicTacToe';
+import Navbar from './Components/navBar/Navbar';
 
 
 
@@ -30,19 +30,27 @@ function App() {
           <Route path='/memorygame' element={<MemoryGame/>}/> */}
         {/* <ToDo/> */}
         {/* <ImageSlider/> */}
-        <MemoryGame/>
+        {/* <MemoryGame/> */}
         {/* <EmployeeList/> */}
         {/* <ControlledComp/> */}
         {/* <LiveClock/> */}
         {/* <ColorPicker/> */}
         {/* <BmiTracker/> */}
-      {/* </BrowserRouter> */}
-      {/* <button onClick={() => { navigate('/memorygame')}}>Memory Game</button> */}
-      {/* <BrowserRouter>
+        <BrowserRouter>
           <Routes>
-            <Route path='memorygame' element={<MemoryGame/>}/>
+            <Route path="/" element={<Navbar />}>
+              <Route index element={<MemoryGame />} />
+              <Route path="memorygame" element={<MemoryGame />} />
+              <Route path="tictactoe" element={<TicTacToe />} />
+              <Route path="colorpicker" element={<ColorPicker />} />
+              <Route path="liveclock" element={<LiveClock />} />
+              <Route path="imageslider" element={<ImageSlider />} />
+              <Route path="todo" element={<ToDo />} />
+            </Route>
           </Routes>
-      </BrowserRouter> */}
+        </BrowserRouter>
+
+        <Outlet />
 
     </div>
   );

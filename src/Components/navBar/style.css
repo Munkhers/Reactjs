@@ -1,0 +1,21 @@
+.navbar-options {
+    width: 20%;
+    /* position: fixed; */
+    color: white;
+    background-color: white;
+    top:40%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.navbar-select {
+    text-decoration: none;
+    list-style: none;
+}
+.navbar-link {
+    text-decoration: none;
+}
+.navbar-link:hover {
+    font-size: 25px;
+}
+

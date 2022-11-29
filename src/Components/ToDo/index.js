@@ -156,7 +156,7 @@ const ToDo = () => {
     }, [filter, list, searchValue])
     
     return (
-        <div >
+        <div className='to-do-body'>
             <form onSubmit={onFormSubmit}>
                 <div className='todo-search'>
                     <input
@@ -165,9 +165,9 @@ const ToDo = () => {
                         placeholder='Search to-do'
                         onChange={(e) => onSearch(e.target.value)}
                     />
-                    <button type='button' onClick={() => {setFilter('all')}}>All</button>
-                    <button type='button' onClick={() => {setFilter('completed')}}>Completed</button>
-                    <button type='button' onClick={() => {setFilter('uncompleted')}}>Uncompleted</button>
+                    <button className='all-button' type='button' onClick={() => {setFilter('all')}}>All</button>
+                    <button className='completed-button' type='button' onClick={() => {setFilter('completed')}}>Completed</button>
+                    <button className='uncompleted-button' type='button' onClick={() => {setFilter('uncompleted')}}>Uncompleted</button>
                 </div>
                 <div className='todo-input'>
                     <input
@@ -192,9 +192,9 @@ const ToDo = () => {
                             <div className='list-date'>Added: ({item.createdDate})</div>
                         </div>
                         <div>
-                            <button onClick={() => { completed(idx) }}><BsFillCheckCircleFill /></button>
-                            <button onClick={() => { editList(idx) }}><MdEdit /></button>
-                            <button onClick={() => { removeList(idx) }}><MdDelete /></button>
+                            <button className='done-button' onClick={() => { completed(idx) }}><BsFillCheckCircleFill /></button>
+                            <button className='edit-button' onClick={() => { editList(idx) }}><MdEdit /></button>
+                            <button className='remove-button' onClick={() => { removeList(idx) }}><MdDelete /></button>
                         </div>
                     </div>
                 )}

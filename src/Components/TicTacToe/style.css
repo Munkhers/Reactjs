@@ -1,9 +1,10 @@
-.game-board { 
+.tictactoe-game-board { 
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: gray;
 }
 .grid-container {
     display: grid;
@@ -25,12 +26,12 @@
     align-items: center;
     color: #000;
 }
-button {
+.newGame-btn {
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 5px;
     text-align: center;
 }
-body {
-    background-color: gray;
+.newGame-btn:hover {
+    cursor: pointer;
 }
