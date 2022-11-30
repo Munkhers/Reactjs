@@ -1,35 +1,19 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import './style.css';
 
 const Navbar = () => {
-  return (
-    <>
-    
-      <nav className="navbar-options">
-        <ul className="navbar-select">
-          <li className="navbar-list">
-            <Link className='navbar-link' to="/memorygame">Memory game</Link>
-          </li>
-          <li className="navbar-list">
-            <Link className='navbar-link' to="/tictactoe">Tic tac toe</Link>
-          </li>
-          <li className="navbar-list">
-            <Link className='navbar-link' to="/colorpicker">Color picker</Link>
-          </li>
-          <li className="navbar-list">
-            <Link className='navbar-link' to='/liveclock'>Live clock</Link>
-          </li>
-          <li className="navbar-list">
-            <Link className='navbar-link' to='/imageslider'>Image slider</Link>
-          </li>
-          <li className="navbar-list">
-            <Link className='navbar-link' to='/todo'>To do</Link>
-          </li>
-        </ul>
-      </nav>
+  const navigate = useNavigate()
 
+  return (
+    <div className="navbar-layout">
+      <button onClick={()=>navigate("/memorygame")}>Memory Game</button>
+      <button onClick={()=>navigate("/tictactoe")}>Tic Tac Toe</button>
+      <button onClick={()=>navigate("/colorpicker")}>Color Picker</button>
+      <button onClick={()=>navigate("/liveclock")}>Live Clock</button>
+      <button onClick={()=>navigate("/imageslider")}>Image Slider</button>
+      <button onClick={()=>navigate("/todo")}>To Do</button>
       <Outlet />
-    </>
+    </div>
   )
 };
 
