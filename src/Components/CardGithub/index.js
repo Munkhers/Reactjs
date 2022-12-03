@@ -3,7 +3,7 @@ import './style.css'
 import ghlogo from './images/ghlogo.png'
 
 const AccountCard = ({person}) => {
-
+    
     return (
         <div className='github-container'>
             <div className='github-card'>

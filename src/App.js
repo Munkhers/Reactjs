@@ -11,9 +11,7 @@ import Navbar from './Components/navBar/Navbar';
 import API from './Components/api-call-playground'
 import CNJokes from './Components/ChuckNorris';
 import GitHubAccount from './Components/GitHubAccount';
-
-
-
+import FollowersCard from './Components/Followers';
 
 function App() {
   return (
@@ -30,7 +28,8 @@ function App() {
               <Route path="todo" element={<ToDo />} />
               <Route path="API" element={<API />} />
               <Route path="CN" element={<CNJokes />} />
-              <Route path="githubaccount" element={<GitHubAccount />} />
+              <Route path="/:loginName" element={<GitHubAccount />} />
+              <Route path="ghfollowers" element={<FollowersCard />} />
             </Route>
           </Routes>
         </BrowserRouter>
@@ -38,5 +37,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

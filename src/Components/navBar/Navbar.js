@@ -13,6 +13,7 @@ const Navbar = () => {
       <button onClick={() => navigate("/imageslider")}>Image Slider</button>
       <button onClick={() => navigate("/todo")}>To Do</button>
       <button onClick={() => navigate('/githubaccount')}>Git Hub Account</button>
+      <button onClick={() => navigate('/ghfollowers')}>Git Hub followers</button>
       <Outlet />
     </div>
   )
