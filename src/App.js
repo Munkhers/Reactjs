@@ -12,6 +12,10 @@ import API from './Components/api-call-playground'
 import CNJokes from './Components/ChuckNorris';
 import GitHubAccount from './Components/GitHubAccount';
 import FollowersCard from './Components/Followers';
+import BmiTracker from './Components/BMI';
+import MovieRate from './Components/MovieRate';
+import CounterUR from './Components/Increment';
+import ShoppingList from './Components/ShoppingList/Shopping';
 
 function App() {
   return (
@@ -22,6 +26,7 @@ function App() {
               <Route index element={<MemoryGame />} />
               <Route path="memorygame" element={<MemoryGame />} />
               <Route path="tictactoe" element={<TicTacToe />} />
+              <Route path="bmi" element={<BmiTracker />} />
               <Route path="colorpicker" element={<ColorPicker />} />
               <Route path="liveclock" element={<LiveClock />} />
               <Route path="imageslider" element={<ImageSlider />} />
@@ -30,6 +35,9 @@ function App() {
               <Route path="CN" element={<CNJokes />} />
               <Route path="/:loginName" element={<GitHubAccount />} />
               <Route path="ghfollowers" element={<FollowersCard />} />
+              <Route path="movierate" element={<MovieRate />} />
+              <Route path="counterur" element={<CounterUR />} />
+              <Route path="shoppinglist" element={<ShoppingList />} />
             </Route>
           </Routes>
         </BrowserRouter>
