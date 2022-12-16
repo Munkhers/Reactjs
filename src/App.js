@@ -12,10 +12,15 @@ import API from './Components/api-call-playground'
 import CNJokes from './Components/ChuckNorris';
 import GitHubAccount from './Components/GitHubAccount';
 import FollowersCard from './Components/Followers';
-import BmiTracker from './Components/BMI';
+import BmiTracker from './Components/BMItracker';
 import MovieRate from './Components/MovieRate';
 import CounterUR from './Components/Increment';
 import ShoppingList from './Components/ShoppingList/Shopping';
+import Table from './Components/Table';
+import UserCrud from './Components/CRUD';
+import CrudForm from './Components/CRUD/form';
+import TreeComponent from './Components/App';
+import ThemeApp from './Components/ThemeApp';
 
 function App() {
   return (
@@ -38,6 +43,11 @@ function App() {
               <Route path="movierate" element={<MovieRate />} />
               <Route path="counterur" element={<CounterUR />} />
               <Route path="shoppinglist" element={<ShoppingList />} />
+              <Route path="table" element={<Table />} />
+              <Route path="crud" element={<UserCrud />} />
+              <Route path="crudedit" element={<CrudForm />} />
+              {/* <Route path="app" element={<TreeComponent />} /> */}
+              <Route path="themeapp" element={<ThemeApp />} />
             </Route>
           </Routes>
         </BrowserRouter>

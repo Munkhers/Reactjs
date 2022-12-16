@@ -18,6 +18,10 @@ const Navbar = () => {
       <button onClick={() => navigate('/movierate')}>Movie</button>
       <button onClick={() => navigate('/counterur')}>Counter useReducer</button>
       <button onClick={() => navigate('/shoppinglist')}>Shopping List</button>
+      <button onClick={() => navigate('/table')}>Table</button>
+      <button onClick={() => navigate('/crud')}>CRUD</button>
+      <button onClick={() => navigate('/app')}>app</button>
+      <button onClick={() => navigate('/themeapp')}>Theme App</button>
       <Outlet />
     </div>
   )

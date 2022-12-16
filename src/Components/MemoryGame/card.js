@@ -6,7 +6,7 @@ const Cell = ({ item, index, onCardClick }) => {
 
     return (
         <div className={'game-table card' + item.status} onClick={() => {
-            item.status === 'hidden' && onCardClick(item, index)}}
+            (item.status === 'hidden') && onCardClick(item, index)}}
             >
             {
                 item.status === 'hidden' ?
